@@ -11,8 +11,6 @@ public class StoreApp {
 
         System.out.println(store.buy());
 
-
-
         context.close();
 
     }
