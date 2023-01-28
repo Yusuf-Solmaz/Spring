@@ -12,6 +12,7 @@ public class HelloSpringApp {
         //retrive bean from spring container
         Coach theCoach = context.getBean("myCoach",Coach.class);
 
+        //If we need another coach, just change class path in applicationContextNew.xml .
 
         //call methods on the bean
         System.out.println(theCoach.getDailyWorkout());
