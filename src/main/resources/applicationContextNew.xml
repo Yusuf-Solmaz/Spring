@@ -11,4 +11,8 @@
           class="com.example.tomcat10.inversionOfControl.BaseballCoach">
     </bean>
 
+    <bean id="myStore" class="com.example.tomcat10.iocExample.PhonePart">
+
+    </bean>
+
 </beans>
