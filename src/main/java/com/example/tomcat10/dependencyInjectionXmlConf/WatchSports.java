@@ -1,4 +1,4 @@
-package com.example.tomcat10.dependencyInjectionXmlConf.constructorInjection;
+package com.example.tomcat10.dependencyInjectionXmlConf;
 
 public interface WatchSports {
 

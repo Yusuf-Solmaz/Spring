@@ -1,4 +1,4 @@
-package com.example.tomcat10.dependencyInjectionXmlConf.constructorInjection;
+package com.example.tomcat10.dependencyInjectionXmlConf;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="sportProps"/>
+
 
     <bean id="myCoach" class="com.example.tomcat10.inversionOfControl.BaseballCoach">
     </bean>
@@ -16,11 +18,27 @@
     </bean>
 
     <!-- Dependency for Injection -->
-    <bean id="myWeather" class="com.example.tomcat10.dependencyInjectionXmlConf.constructorInjection.SunnyDay">
+    <bean id="myWeather" class="com.example.tomcat10.dependencyInjectionXmlConf.RainyDay">
     </bean>
 
-    <bean id="watchSports" class="com.example.tomcat10.dependencyInjectionXmlConf.constructorInjection.Formula1">
+    <bean id="watchSports" class="com.example.tomcat10.dependencyInjectionXmlConf.Formula1">
         <!-- Constructor Injection -->
         <constructor-arg ref="myWeather"/>
+    </bean>
+
+    <!-- Setter Injection -->
+    <bean id="watchBasketball" class="com.example.tomcat10.dependencyInjectionXmlConf.Basketball">
+        <property name="weatherService" ref="myWeather"/>
+
+        <!-- Value Injection -->
+        <property name="teamName" value="Chicago Bulls"/>
+        <property name="date" value="30.01.2023"/>
+
+    </bean>
+
+    <bean id="watchVolleyball" class="com.example.tomcat10.dependencyInjectionXmlConf.Volleyball">
+        <property name="weatherService" ref="myWeather"/>
+        <property name="teamName" value="${prop.name}"/>
+        <property name="date" value="${prop.Date}"/>
     </bean>
 </beans>
