@@ -7,12 +7,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="myCoach"
-          class="com.example.tomcat10.inversionOfControl.BaseballCoach">
+
+    <bean id="myCoach" class="com.example.tomcat10.inversionOfControl.BaseballCoach">
     </bean>
 
+    <!-- IOC Example -->
     <bean id="myStore" class="com.example.tomcat10.iocExample.PhonePart">
-
     </bean>
 
+    <!-- Dependency for Injection -->
+    <bean id="myWeather" class="com.example.tomcat10.dependencyInjectionXmlConf.constructorInjection.SunnyDay">
+    </bean>
+
+    <bean id="watchSports" class="com.example.tomcat10.dependencyInjectionXmlConf.constructorInjection.Formula1">
+        <!-- Constructor Injection -->
+        <constructor-arg ref="myWeather"/>
+    </bean>
 </beans>
