@@ -45,7 +45,8 @@
     <bean id="myFortune" class="com.example.tomcat10.dependencyInjectionExample.MyFortune">
     </bean>
 
-    <bean id="myDay" class="com.example.tomcat10.dependencyInjectionExample.MyDay">
+    <!-- scope="prototype" oluşturulan bean'leri farklı adreste tutar. scope="singleton" oluşan bean'leri aynı adreste tutar ve default değerdir.  -->
+    <bean id="myDay" class="com.example.tomcat10.dependencyInjectionExample.MyDay" >
         <constructor-arg ref="myFortune"/>
     </bean>
 </beans>
