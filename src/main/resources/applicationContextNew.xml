@@ -41,4 +41,12 @@
         <property name="teamName" value="${prop.name}"/>
         <property name="date" value="${prop.Date}"/>
     </bean>
+
+    <bean id="myFortune" class="com.example.tomcat10.dependencyInjectionExample.MyFortune">
+    </bean>
+
+    <bean id="myDay" class="com.example.tomcat10.dependencyInjectionExample.MyDay">
+        <constructor-arg ref="myFortune"/>
+    </bean>
 </beans>
+
