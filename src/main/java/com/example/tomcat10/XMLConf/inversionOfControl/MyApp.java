@@ -1,4 +1,4 @@
-package com.example.tomcat10.inversionOfControl;
+package com.example.tomcat10.XMLConf.inversionOfControl;
 
 public class MyApp {
 

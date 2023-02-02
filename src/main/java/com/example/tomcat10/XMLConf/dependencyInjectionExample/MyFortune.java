@@ -1,4 +1,4 @@
-package com.example.tomcat10.dependencyInjectionExample;
+package com.example.tomcat10.XMLConf.dependencyInjectionExample;
 
 public class MyFortune implements FortuneService{
 

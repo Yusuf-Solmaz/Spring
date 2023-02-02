@@ -1,4 +1,4 @@
-package com.example.tomcat10.iocExample;
+package com.example.tomcat10.XMLConf.iocExample;
 
 public interface Store {
     public String buy();

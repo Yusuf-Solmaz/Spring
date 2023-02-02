@@ -10,24 +10,24 @@
     <context:property-placeholder location="sportProps"/>
 
 
-    <bean id="myCoach" class="com.example.tomcat10.inversionOfControl.BaseballCoach">
+    <bean id="myCoach" class="com.example.tomcat10.XMLConf.inversionOfControl.BaseballCoach">
     </bean>
 
     <!-- IOC Example -->
-    <bean id="myStore" class="com.example.tomcat10.iocExample.PhonePart">
+    <bean id="myStore" class="com.example.tomcat10.XMLConf.iocExample.PhonePart">
     </bean>
 
     <!-- Dependency for Injection -->
-    <bean id="myWeather" class="com.example.tomcat10.dependencyInjectionXmlConf.RainyDay">
+    <bean id="myWeather" class="com.example.tomcat10.XMLConf.dependencyInjectionXmlConf.RainyDay">
     </bean>
 
-    <bean id="watchSports" class="com.example.tomcat10.dependencyInjectionXmlConf.Formula1">
+    <bean id="watchSports" class="com.example.tomcat10.XMLConf.dependencyInjectionXmlConf.Formula1">
         <!-- Constructor Injection -->
         <constructor-arg ref="myWeather"/>
     </bean>
 
     <!-- Setter Injection -->
-    <bean id="watchBasketball" class="com.example.tomcat10.dependencyInjectionXmlConf.Basketball">
+    <bean id="watchBasketball" class="com.example.tomcat10.XMLConf.dependencyInjectionXmlConf.Basketball">
         <property name="weatherService" ref="myWeather"/>
 
         <!-- Value Injection -->
@@ -36,19 +36,19 @@
 
     </bean>
 
-    <bean id="watchVolleyball" class="com.example.tomcat10.dependencyInjectionXmlConf.Volleyball">
+    <bean id="watchVolleyball" class="com.example.tomcat10.XMLConf.dependencyInjectionXmlConf.Volleyball">
         <property name="weatherService" ref="myWeather"/>
         <property name="teamName" value="${prop.name}"/>
         <property name="date" value="${prop.Date}"/>
     </bean>
 
-    <bean id="myFortune" class="com.example.tomcat10.dependencyInjectionExample.MyFortune">
+    <bean id="myFortune" class="com.example.tomcat10.XMLConf.dependencyInjectionExample.MyFortune">
     </bean>
 
     <!-- scope="prototype" oluşturulan bean'leri farklı adreste tutar. scope="singleton" oluşan bean'leri aynı adreste tutar ve default değerdir.  -->
     <!-- init-method="methodName" , destroy-method="methodName" (Bean çağırıldığında init; kapatıldığında destroy'daki methodlar çağrılır.)-->
     <!-- scope eğer "prototype olursa destroy method çağırılmaz." -->
-    <bean id="myDay" class="com.example.tomcat10.dependencyInjectionExample.MyDay" >
+    <bean id="myDay" class="com.example.tomcat10.XMLConf.dependencyInjectionExample.MyDay" >
         <constructor-arg ref="myFortune"/>
     </bean>
 </beans>

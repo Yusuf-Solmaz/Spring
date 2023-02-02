@@ -1,5 +1,6 @@
-package com.example.tomcat10.iocExample;
+package com.example.tomcat10.XMLConf.iocExample;
 
+import com.example.tomcat10.XMLConf.iocExample.Store;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class StoreApp {

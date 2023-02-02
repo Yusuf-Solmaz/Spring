@@ -1,4 +1,4 @@
-package com.example.tomcat10.dependencyInjectionXmlConf;
+package com.example.tomcat10.XMLConf.dependencyInjectionXmlConf;
 
 public class Formula1 implements WatchSports{
 

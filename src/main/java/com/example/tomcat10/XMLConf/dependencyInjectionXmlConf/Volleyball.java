@@ -1,11 +1,9 @@
-package com.example.tomcat10.dependencyInjectionXmlConf;
-
+package com.example.tomcat10.XMLConf.dependencyInjectionXmlConf;
 
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class Basketball implements WatchSports{
-
+public class Volleyball implements WatchSports{
     private String teamName;
 
     private String date;
@@ -20,6 +18,14 @@ public class Basketball implements WatchSports{
         this.date = date;
     }
 
+    public void setWeatherService(WeatherService weatherService) {
+        this.weatherService = weatherService;
+    }
+
+    public Volleyball(WeatherService weatherService) {
+        this.weatherService = weatherService;
+    }
+
     public String getTeamName() {
         return teamName;
     }
@@ -28,13 +34,9 @@ public class Basketball implements WatchSports{
         return date;
     }
 
-    public void setWeatherService(WeatherService weatherService) {
-        this.weatherService = weatherService;
-    }
-
     @Override
     public String watch() {
-        return "You are watching basketball.";
+        return "You are watching volleyball.";
     }
 
     @Override

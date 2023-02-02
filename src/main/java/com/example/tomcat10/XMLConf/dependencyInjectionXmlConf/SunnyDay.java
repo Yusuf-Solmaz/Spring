@@ -1,4 +1,4 @@
-package com.example.tomcat10.dependencyInjectionXmlConf;
+package com.example.tomcat10.XMLConf.dependencyInjectionXmlConf;
 
 public class SunnyDay implements WeatherService{
     @Override
