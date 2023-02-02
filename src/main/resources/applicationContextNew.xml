@@ -47,6 +47,7 @@
 
     <!-- scope="prototype" oluşturulan bean'leri farklı adreste tutar. scope="singleton" oluşan bean'leri aynı adreste tutar ve default değerdir.  -->
     <!-- init-method="methodName" , destroy-method="methodName" (Bean çağırıldığında init; kapatıldığında destroy'daki methodlar çağrılır.)-->
+    <!-- scope eğer "prototype olursa destroy method çağırılmaz." -->
     <bean id="myDay" class="com.example.tomcat10.dependencyInjectionExample.MyDay" >
         <constructor-arg ref="myFortune"/>
     </bean>
