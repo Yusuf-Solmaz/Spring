@@ -2,6 +2,7 @@ package com.example.tomcat10.springConfAnnotations.constuctorInjection;
 
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,6 +11,7 @@ public class MyDay implements DoSomething {
 
     //Field Injection
     @Autowired
+    @Qualifier("mySecondFortune")
     FortuneService fortuneService;
 
     // Constuctor Injection
