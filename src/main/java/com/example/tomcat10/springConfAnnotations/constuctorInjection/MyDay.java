@@ -8,13 +8,15 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class MyDay implements DoSomething {
 
+    //Field Injection
+    @Autowired
     FortuneService fortuneService;
 
     // Constuctor Injection
-    @Autowired
+    /*@Autowired
     public MyDay(FortuneService fortuneService){
         this.fortuneService=fortuneService;
-    }
+    }*/
 
     /* Setter Injection
     @Autowired
