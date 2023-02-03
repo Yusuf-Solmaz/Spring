@@ -1,9 +1,10 @@
-package com.example.tomcat10.springConfAnnotations;
+package com.example.tomcat10.springConfAnnotations.inversionOfControl;
 
+import com.example.tomcat10.springConfAnnotations.inversionOfControl.DoSomething;
 import org.springframework.stereotype.Component;
 
 @Component("doInSchool")
-public class School implements DoSomething{
+public class School implements DoSomething {
 
     @Override
     public String eat() {

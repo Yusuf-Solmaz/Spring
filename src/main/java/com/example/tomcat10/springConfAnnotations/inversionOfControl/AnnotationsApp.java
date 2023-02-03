@@ -1,4 +1,4 @@
-package com.example.tomcat10.springConfAnnotations;
+package com.example.tomcat10.springConfAnnotations.inversionOfControl;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

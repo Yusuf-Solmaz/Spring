@@ -9,7 +9,7 @@
 
 
     <context:component-scan base-package="com.example.tomcat10.springConfAnnotations"></context:component-scan>
-    <!--<bean id="doInSchool" class="com.example.tomcat10.springConfAnnotations.School"></bean>-->
+    <!--<bean id="doInSchool" class="com.example.tomcat10.springConfAnnotations.inversionOfControl.School"></bean>-->
 
 
 </beans>
