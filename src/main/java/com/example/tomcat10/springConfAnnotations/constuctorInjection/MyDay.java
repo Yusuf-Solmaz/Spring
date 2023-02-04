@@ -3,10 +3,12 @@ package com.example.tomcat10.springConfAnnotations.constuctorInjection;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 @NoArgsConstructor
+@Scope("prototype") // Default scope is singleton
 public class MyDay implements DoSomething {
 
     FortuneService fortuneService;

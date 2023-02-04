@@ -10,9 +10,12 @@ public class FortuneApp {
 
         DoSomething myDay = context.getBean("myDay", DoSomething.class);
 
+
         System.out.println(myDay.doSomething());
 
         System.out.println(myDay.getDailyFortune());
+
+
 
         context.close();
 
