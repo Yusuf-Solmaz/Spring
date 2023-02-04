@@ -15,10 +15,7 @@ public class FortuneApp {
 
         System.out.println(myDay.getDailyFortune());
 
-
-
         context.close();
-
     }
 
 }

@@ -3,6 +3,7 @@ package com.example.tomcat10.springConfAnnotations.constuctorInjection;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +17,12 @@ public class MySecondFortune implements FortuneService{
     private Random random = new Random();
 
 
-    public MySecondFortune() throws IOException {
+    public MySecondFortune() {
 
+    }
+
+    @PostConstruct
+    public void readTxt() throws IOException{
         File file = new File(textPath);
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
@@ -27,7 +32,6 @@ public class MySecondFortune implements FortuneService{
         while ((line = br.readLine()) != null) {
             fortune.add(line);
         }
-
     }
 
     @Override
