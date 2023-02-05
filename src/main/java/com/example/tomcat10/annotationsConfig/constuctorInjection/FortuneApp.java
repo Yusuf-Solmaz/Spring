@@ -1,5 +1,6 @@
 package com.example.tomcat10.annotationsConfig.constuctorInjection;
 
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class FortuneApp {
@@ -9,7 +10,6 @@ public class FortuneApp {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("annotationsContext.xml");
 
         DoSomething myDay = context.getBean("myDay", DoSomething.class);
-
 
         System.out.println(myDay.doSomething());
 

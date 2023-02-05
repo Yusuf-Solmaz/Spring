@@ -24,6 +24,9 @@
         <fileset id="fileset3" name="AnnotationsContext" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/annotationsContext.xml</file>
         </fileset>
+        <fileset id="fileset4" name="ConfigContext" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/configContext.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
