@@ -7,7 +7,7 @@ public class AnnotationsApp {
 
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("annotationsContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("configContext.xml");
 
         DoSomething doSomething = context.getBean("home",DoSomething.class);
 
