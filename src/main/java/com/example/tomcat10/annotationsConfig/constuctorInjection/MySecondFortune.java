@@ -1,8 +1,9 @@
 package com.example.tomcat10.annotationsConfig.constuctorInjection;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
