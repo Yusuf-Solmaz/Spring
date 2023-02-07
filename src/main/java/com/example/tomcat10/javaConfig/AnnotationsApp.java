@@ -10,11 +10,13 @@ public class AnnotationsApp {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 
-        DoSomething doSomething = context.getBean("home", DoSomething.class);
+        DoSomething doSomething = context.getBean("backyard", DoSomething.class);
 
         System.out.println(doSomething.eat());
 
         System.out.println(doSomething.watch());
+
+        System.out.println(doSomething.getWeather());
 
         context.close();
     }
